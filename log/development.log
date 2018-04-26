@@ -1,0 +1,2880 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (157.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (188.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to CreateUsers (20180419032647)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "uid" varchar, "provider" varchar, "oauth_token" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180419032647_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180419032647"]]
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (145.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-19 03:28:27.031787"], ["updated_at", "2018-04-19 03:28:27.031787"]]
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (143.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-04-19 09:01:44 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-19 22:39:44 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-19 22:50:22 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (284.3ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x007f3ea0a620f8>:0x007f3ea018b308>
+Did you mean?  current_page?):
+    1: - if current_user.blank?
+    2:   %h1 Please Sign In
+    3:   = link_to 'Sign In with Github', '/auth/github'
+    4: - else
+  
+app/views/sessions/new.html.haml:1:in `_app_views_sessions_new_html_haml__421272128080879912_69953479972720'
+Started GET "/" for 127.0.0.1 at 2018-04-19 22:51:40 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/trupti/Trupti/AmuraProject/app/assets/config
+  /home/trupti/Trupti/AmuraProject/app/assets/images
+  /home/trupti/Trupti/AmuraProject/app/assets/javascripts
+  /home/trupti/Trupti/AmuraProject/app/assets/stylesheets
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/actionview-5.2.0/lib/assets/compiled
+  /home/trupti/Trupti/AmuraProject/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3255134335156794073_69953477909340'
+Started GET "/" for 127.0.0.1 at 2018-04-19 22:52:13 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 151ms (Views: 149.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-19 22:52:17 +0530
+Started GET "/" for 127.0.0.1 at 2018-04-19 22:59:25 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 254ms (Views: 252.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-19 22:59:27 +0530
+Started GET "/auth/github/callback?code=41d86ad0660bc96e8a30&state=6a3b700f6aa20e51123e6fb3fa8cc743b0c1a7a5a8e4ff09" for 127.0.0.1 at 2018-04-19 22:59:47 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"41d86ad0660bc96e8a30", "state"=>"6a3b700f6aa20e51123e6fb3fa8cc743b0c1a7a5a8e4ff09", "provider"=>"github"}
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `env' for #<SessionsController:0x007f4cfc230820>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:04:54 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 247ms (Views: 245.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-19 23:04:57 +0530
+Started GET "/auth/github/callback?code=040a90d046556dfa4332&state=38643ca34dba00e582821a4b07d25933e58461b6ae1548de" for 127.0.0.1 at 2018-04-19 23:05:00 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"040a90d046556dfa4332", "state"=>"38643ca34dba00e582821a4b07d25933e58461b6ae1548de", "provider"=>"github"}
+Completed 500 Internal Server Error in 38567ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create_from_omniauth'
+app/models/user.rb:5:in `create_from_omniauth'
+app/controllers/sessions_controller.rb:6:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:06:21 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 244ms (Views: 243.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-19 23:06:26 +0530
+Started GET "/auth/github/callback?code=17072be9bf6a8b75a737&state=54140452f79faafcd170988140bc7e13102000554f64f452" for 127.0.0.1 at 2018-04-19 23:06:28 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"17072be9bf6a8b75a737", "state"=>"54140452f79faafcd170988140bc7e13102000554f64f452", "provider"=>"github"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "uid", "provider", "oauth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "TruptiKadam"], ["email", "trupti23kadam@gmail.com"], ["uid", "5887719"], ["provider", "github"], ["oauth_token", "0e980a4816fbce4229ed6f2a40e8bda7a291c41e"], ["created_at", "2018-04-19 17:36:36.579232"], ["updated_at", "2018-04-19 17:36:36.579232"]]
+  ↳ app/models/user.rb:10
+  [1m[35m (270.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10
+Redirected to http://localhost:3000/
+Completed 302 Found in 297ms (ActiveRecord: 274.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:06:36 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-04-19 23:06:48 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hxnUflHwIzY2XZsmaRvlPYq8jTcznYqRFAhcVZgyY9JSR+pITH5eK7QTjK1TIzFmt4q14fhrZW2q2gSQy+NnpA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:06:48 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-19 23:06:52 +0530
+Started GET "/auth/github/callback?code=c06df258bc1139dac448&state=035230653dc92c00fdc663ff8026b0f00abeb53ca2718cf7" for 127.0.0.1 at 2018-04-19 23:06:52 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"c06df258bc1139dac448", "state"=>"035230653dc92c00fdc663ff8026b0f00abeb53ca2718cf7", "provider"=>"github"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10
+  [1m[36mUser Update (3.1ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "84dd0171d57db7b229d15fb6859fe73d92504bc5"], ["updated_at", "2018-04-19 17:37:02.926782"], ["id", 1]]
+  ↳ app/models/user.rb:10
+  [1m[35m (200.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10
+Redirected to http://localhost:3000/
+Completed 302 Found in 213ms (ActiveRecord: 204.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:07:03 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:09:22 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:09:23 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:10:47 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (28.8ms)
+Completed 200 OK in 253ms (Views: 250.3ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-04-19 23:10:49 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ryNXA8ZGQexA5aQgwBDKxgVYpkZoJUk+Ebg8HRl/g1ulIss/keECNUnMObgtug+pidrygDcRbqwsd92kxN5iFw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:10:49 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:10:56 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-19 23:11:01 +0530
+Started GET "/auth/github/callback?code=e318ae2a7b4b030feb94&state=0d711e6f2ffba7934cc010e8e277e9b4b5174e755581f841" for 127.0.0.1 at 2018-04-19 23:11:04 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"e318ae2a7b4b030feb94", "state"=>"0d711e6f2ffba7934cc010e8e277e9b4b5174e755581f841", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "fc5edd00fa6310da98b3ef7d68a9f1407248e97a"], ["updated_at", "2018-04-19 17:41:12.778724"], ["id", 1]]
+  ↳ app/models/user.rb:10
+  [1m[35m (143.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 145.0ms)
+
+
+  
+NameError (undefined local variable or method `ser' for #<SessionsController:0x007f278416c378>
+Did you mean?  user):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:11:35 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 228ms (Views: 227.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-19 23:11:38 +0530
+Started GET "/auth/github/callback?code=9314ff3478b3c166a831&state=53fda04032fee537f98bb33784d643c4dfcf500f66e0bcc5" for 127.0.0.1 at 2018-04-19 23:11:38 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"9314ff3478b3c166a831", "state"=>"53fda04032fee537f98bb33784d643c4dfcf500f66e0bcc5", "provider"=>"github"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "9ef34d46c4911247f86198e6444ba59ae7f8e060"], ["updated_at", "2018-04-19 17:41:48.844608"], ["id", 1]]
+  ↳ app/models/user.rb:10
+  [1m[35m (152.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10
+Completed 500 Internal Server Error in 354ms (ActiveRecord: 156.4ms)
+
+
+  
+NameError (undefined local variable or method `curren_user' for #<SessionsController:0x007f6af0121080>
+Did you mean?  current_user):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-19 23:12:11 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 255ms (Views: 253.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-19 23:12:13 +0530
+Started GET "/auth/github/callback?code=596f80ab0ae9a2bf08da&state=4282e6850e4645eb50db2295370a41758080ad4d895bf961" for 127.0.0.1 at 2018-04-19 23:12:14 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"596f80ab0ae9a2bf08da", "state"=>"4282e6850e4645eb50db2295370a41758080ad4d895bf961", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "185df3b7f7d1a858c86ba12921be573ecdb29402"], ["updated_at", "2018-04-19 17:42:24.062094"], ["id", 1]]
+  ↳ app/models/user.rb:10
+  [1m[35m (188.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 518811ms (ActiveRecord: 191.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:39:55 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 271ms (Views: 270.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-20 13:39:59 +0530
+Started GET "/auth/github/callback?code=205420009eab56903fd7&state=5b9f1ad1358c379424a31a0066274371feecef3092bcde1b" for 127.0.0.1 at 2018-04-20 13:40:01 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"205420009eab56903fd7", "state"=>"5b9f1ad1358c379424a31a0066274371feecef3092bcde1b", "provider"=>"github"}
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `validats_presence_of' for #<Class:0x007fa94c136ff8>
+Did you mean?  validates_absence_of
+               validates_presence_of):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/sessions_controller.rb:6:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:40:29 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (22.0ms)
+Completed 200 OK in 244ms (Views: 243.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-20 13:40:53 +0530
+Started GET "/auth/github/callback?code=4e80fb6c83be5ff8ca52&state=41151a8e8187b7c6301f567607183f544889e748aa52771c" for 127.0.0.1 at 2018-04-20 13:40:54 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4e80fb6c83be5ff8ca52", "state"=>"41151a8e8187b7c6301f567607183f544889e748aa52771c", "provider"=>"github"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "667f401d6efd091375799462c528e519d757af0c"], ["updated_at", "2018-04-20 08:11:01.385636"], ["id", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (151.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 287713ms (ActiveRecord: 154.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:46:05 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 240ms (Views: 239.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-20 13:46:09 +0530
+Started GET "/auth/github/callback?code=91a29b849f9830347373&state=20fb62446c108f343e753d3c4c86f804d63dae91fb01fe97" for 127.0.0.1 at 2018-04-20 13:46:10 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"91a29b849f9830347373", "state"=>"20fb62446c108f343e753d3c4c86f804d63dae91fb01fe97", "provider"=>"github"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "3e35842e8d8278cbcb803951a8d546604a0cad09"], ["updated_at", "2018-04-20 08:16:16.363140"], ["id", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (152.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Started GET "/auth/github/callback?code=91a29b849f9830347373&state=20fb62446c108f343e753d3c4c86f804d63dae91fb01fe97" for 127.0.0.1 at 2018-04-20 13:47:01 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+error=bad_verification_code&error_description=The+code+passed+is+incorrect+or+expired.&error_uri=https%3A%2F%2Fdeveloper.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-oauth-app-access-token-request-errors%2F%23bad-verification-code):
+  
+oauth2 (1.4.0) lib/oauth2/client.rb:149:in `get_token'
+oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:47:09 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 227ms (Views: 226.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:47:10 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-20 13:47:12 +0530
+Started GET "/auth/github/callback?code=6033e7ddb582a6d9ac97&state=d488aaf9a8648bab972e8f8183052a9bca6a268424611f9b" for 127.0.0.1 at 2018-04-20 13:47:13 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"6033e7ddb582a6d9ac97", "state"=>"d488aaf9a8648bab972e8f8183052a9bca6a268424611f9b", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "859230eaabaa5d289a73e42af46fb6c3b6fd9e15"], ["updated_at", "2018-04-20 08:17:20.098800"], ["id", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (749.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 3250ms (ActiveRecord: 752.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:47:23 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:     %tr
+    12:       %th No
+    13:       %th Repository Name
+    14:     - @repositories.each do |repo, index|
+    15:       %tr
+    16:         %td
+    17:           = "#{}{index} + 1"
+  
+app/views/sessions/new.html.haml:14:in `_app_views_sessions_new_html_haml___3565199495415216481_70118765937300'
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:48:52 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 2074ms (Views: 17.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:49:30 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 2535ms (Views: 38.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:50:26 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 2726ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:50:48 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 2374ms (Views: 22.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:51:59 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 1856ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 13:52:51 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 2784ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:13:00 +0530
+  
+SyntaxError (/home/trupti/Trupti/AmuraProject/config/routes.rb:5: syntax error, unexpected '\n', expecting =>):
+  
+config/routes.rb:5: syntax error, unexpected '\n', expecting =>
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:13:25 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 2594ms (Views: 22.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 14:13:35 +0530
+  
+LoadError (Unable to autoload constant RepositoriesController, expected /home/trupti/Trupti/AmuraProject/app/controllers/repositories_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 14:14:51 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 14:21:22 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:22:25 +0530
+Completed 500 Internal Server Error in 62263ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/repositories_controller.rb:5:in `show'
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (206.3ms)
+Completed 200 OK in 6548ms (Views: 3313.6ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:22:36 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (199.0ms)
+Completed 200 OK in 2407ms (Views: 521.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-20 14:22:46 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:29:23 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 2648ms (Views: 236.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 14:29:28 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+Completed 500 Internal Server Error in 20019ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (SyntaxError Exception: (byebug):1: syntax error, unexpected '='
+= Github
+ ^
+):
+  
+app/controllers/repositories_controller.rb:5:in `show'
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 14:30:03 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 14:36:00 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+Completed 500 Internal Server Error in 10212ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/repositories_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:36:17 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:36:18 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 488752ms (ActiveRecord: 0.4ms)
+
+
+  
+Faraday::ConnectionFailed (Net::OpenTimeout):
+  
+app/controllers/sessions_controller.rb:26:in `get_user_repositories'
+app/controllers/sessions_controller.rb:4:in `new'
+Completed 500 Internal Server Error in 489400ms (ActiveRecord: 1.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/sessions_controller.rb:7:in `new'
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:45:06 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 3032ms (Views: 251.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 14:45:12 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 455371ms (ActiveRecord: 0.6ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/repositories_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:53:19 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:53:20 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 2250ms (Views: 252.5ms | ActiveRecord: 1.4ms)
+
+
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 2010ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 14:53:28 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 368927ms (ActiveRecord: 0.8ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/repositories_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2018-04-20 15:00:27 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Started GET "/" for 127.0.0.1 at 2018-04-20 15:00:27 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 1987ms (Views: 233.1ms | ActiveRecord: 1.3ms)
+
+
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 1678ms (Views: 21.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 15:00:32 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 259434ms (ActiveRecord: 0.6ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/repositories_controller.rb:5:in `show'
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 15:05:21 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed   in 642956ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 15:16:10 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 3859ms (Views: 246.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 15:16:24 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (285.5ms)
+Completed 500 Internal Server Error in 3254ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `repo' for #<#<Class:0x007f51f416c8b0>:0x007f51f41770d0>):
+    3: = button_to "Sign Out", signout_path, method: :delete
+    4: 
+    5: %h2
+    6:   = "#{repo.name} Repository"
+    7: %h2
+    8:   = "Description : #{repo.description}"
+  
+app/views/repositories/show.html.haml:6:in `_app_views_repositories_show_html_haml__2525995112171841123_69994982107300'
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 15:16:47 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 3009ms (Views: 29.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 15:17:15 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 2952ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-20 15:17:32 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 2731ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/repository?repo_name=scotch-angular-testing" for 127.0.0.1 at 2018-04-20 15:17:40 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"scotch-angular-testing"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 2280ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 15:17:47 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 2462ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 15:18:56 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 2659ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 15:19:00 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 2167ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=scotch-angular-testing" for 127.0.0.1 at 2018-04-20 15:19:10 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"scotch-angular-testing"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 2514ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 16:16:13 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 3021ms (Views: 647.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:52:38 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 3301ms (Views: 171.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:54:42 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 2492ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/trupti/Trupti/AmuraProject/app/assets/config
+  /home/trupti/Trupti/AmuraProject/app/assets/images
+  /home/trupti/Trupti/AmuraProject/app/assets/javascripts
+  /home/trupti/Trupti/AmuraProject/app/assets/stylesheets
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/d3-rails-4.13.0/app/assets/javascripts
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/trupti/.rvm/gems/ruby-2.4.1/gems/actionview-5.2.0/lib/assets/compiled
+  /home/trupti/Trupti/AmuraProject/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__1786235872226811623_69999861368680'
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:55:20 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 1381ms (Views: 29.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:55:39 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 3873ms (Views: 152.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:57:57 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 2415ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:58:59 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 2513ms (Views: 124.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 16:59:05 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  Rendered repositories/show.html.haml within layouts/application (149.0ms)
+Completed 500 Internal Server Error in 2675ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( graph.js )` to `config/initializers/assets.rb` and restart your server):
+    1: = javascript_include_tag 'graph'
+    2: %p
+    3:   You are signed in as #{current_user.username}.  Click the button below to sign out.
+    4: = button_to "Sign Out", signout_path, method: :delete
+  
+app/views/repositories/show.html.haml:1:in `_app_views_repositories_show_html_haml___1599741381391957520_69999814551080'
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 17:02:49 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (224.4ms)
+Completed 200 OK in 2306ms (Views: 248.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 17:03:16 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (36.0ms)
+Completed 200 OK in 2920ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 17:04:24 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 2182ms (Views: 51.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:11:45 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 2671ms (Views: 30.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:22:15 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (256.6ms)
+Completed 200 OK in 2333ms (Views: 281.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:23:04 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 3739ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:23:24 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 2730ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:24:22 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (35.3ms)
+Completed 200 OK in 4525ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:31:16 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 3349ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:36:10 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (46.4ms)
+Completed 200 OK in 7708ms (Views: 58.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:39:32 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (24.4ms)
+Completed 200 OK in 10835ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:43:50 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (37.6ms)
+Completed 200 OK in 5031ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:44:16 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 2668ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:45:30 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (37.2ms)
+Completed 200 OK in 5844ms (Views: 51.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:48:20 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 2377ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:49:12 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (47.8ms)
+Completed 200 OK in 3989ms (Views: 60.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 22:50:10 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 2776ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:33:16 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (41.4ms)
+Completed 200 OK in 2743ms (Views: 57.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:37:00 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.4ms)
+Completed 200 OK in 2183ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:40:42 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (40.8ms)
+Completed 200 OK in 2195ms (Views: 54.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:42:02 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 2997ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:43:57 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 2134ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:45:51 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 3079ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:46:44 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 2461ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:48:31 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (29.4ms)
+Completed 200 OK in 2417ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:53:31 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (44.6ms)
+Completed 200 OK in 2712ms (Views: 57.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-20 23:55:51 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 2568ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-21 07:00:33 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.0ms)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to api.github.com:443 (getaddrinfo: Name or service not known)):
+  
+app/controllers/repositories_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2018-04-21 07:02:02 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Started GET "/" for 127.0.0.1 at 2018-04-21 07:02:03 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 2159ms (Views: 528.9ms | ActiveRecord: 0.3ms)
+
+
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 2378ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 07:02:23 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 2424ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 07:02:47 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (72.8ms)
+Completed 200 OK in 2948ms (Views: 84.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 07:03:31 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (18.3ms)
+Completed 200 OK in 2390ms (Views: 33.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:03:29 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 2536ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:04:37 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (54.1ms)
+Completed 200 OK in 2810ms (Views: 65.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:07:11 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (42.5ms)
+Completed 200 OK in 4013ms (Views: 55.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:07:19 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 5432ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:11:17 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 1531ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:46:45 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (39.1ms)
+Completed 200 OK in 1951ms (Views: 50.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:47:16 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (297.1ms)
+Completed 200 OK in 2690ms (Views: 308.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:47:52 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.3ms)
+Completed 200 OK in 3146ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:48:22 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (32.7ms)
+Completed 200 OK in 2906ms (Views: 42.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:50:41 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (40.2ms)
+Completed 200 OK in 2201ms (Views: 53.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:53:39 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (27.7ms)
+Completed 200 OK in 2122ms (Views: 42.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:57:32 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (37.6ms)
+Completed 200 OK in 2422ms (Views: 52.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:57:52 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 1705ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 10:59:34 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (31.9ms)
+Completed 200 OK in 2866ms (Views: 44.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:01:33 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 7285ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:03:16 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (19.5ms)
+Completed 200 OK in 2538ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:05:22 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 1441ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:06:38 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 2632ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:10:31 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 3109ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:11:43 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 2865ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:15:17 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 2060ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:17:05 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (33.6ms)
+Completed 200 OK in 2119ms (Views: 47.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:18:29 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 2351ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:18:55 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (40.3ms)
+Completed 200 OK in 2463ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:20:51 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 4217ms (Views: 25.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:21:09 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 2665ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:21:28 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 3582ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:25:49 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 2313ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:28:00 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 2468ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:29:28 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 2917ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:33:12 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.9ms)
+Completed 200 OK in 2900ms (Views: 47.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:33:49 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 3157ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:35:36 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (41.7ms)
+Completed 200 OK in 2888ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:37:57 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (65.9ms)
+Completed 200 OK in 2635ms (Views: 80.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:38:15 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 2304ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:39:02 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 2682ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:40:46 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (32.1ms)
+Completed 200 OK in 2437ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:41:40 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 5725ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:42:34 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 4082ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:43:25 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 3438ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 11:43:54 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (34.2ms)
+Completed 200 OK in 28927ms (Views: 48.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:01:24 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 3081ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:02:11 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 2661ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:02:27 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 8060ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:04:40 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (19.4ms)
+Completed 200 OK in 3443ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:05:29 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (34.5ms)
+Completed 200 OK in 2447ms (Views: 50.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:06:46 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (31.2ms)
+Completed 200 OK in 2708ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:11:05 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 3941ms (Views: 22.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:12:57 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (68.5ms)
+Completed 200 OK in 3347ms (Views: 84.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:16:50 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (36.1ms)
+Completed 200 OK in 2938ms (Views: 49.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:17:27 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (29.0ms)
+Completed 200 OK in 2101ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:22:32 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 2661ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:23:38 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 2401ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:26:47 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (31.8ms)
+Completed 200 OK in 2846ms (Views: 57.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:27:17 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 2734ms (Views: 23.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:29:35 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (215.2ms)
+Completed 200 OK in 2467ms (Views: 233.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:31:45 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 2554ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:32:14 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 4388ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:34:46 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 2208ms (Views: 25.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/repository?repo_name=exception_notification" for 127.0.0.1 at 2018-04-21 13:40:47 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"exception_notification"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 2564ms (Views: 45.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-04-21 13:42:29 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+HAUy6fS6IGEsrB9sP0Hhs6chBd6QjRHhWz1kgG0P/a0L+66qKm7yU/UCvhLLiyxyda5HOndadGliiB7GgIVgA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:42:29 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:42:33 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:42:42 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-21 13:42:46 +0530
+Started GET "/auth/github/callback?code=46241c255237be68e9a0&state=a31cace26ec67b00a1bc3a372630237555a7f0b19a45b8c6" for 127.0.0.1 at 2018-04-21 13:43:21 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"46241c255237be68e9a0", "state"=>"a31cace26ec67b00a1bc3a372630237555a7f0b19a45b8c6", "provider"=>"github"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "5c855c6a0b034a8192ebe2a9f50a59bb15acb26c"], ["updated_at", "2018-04-21 08:13:27.518773"], ["id", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (162.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 169ms (ActiveRecord: 163.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:43:27 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 1578ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-21 13:43:36 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 3781ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-21 13:44:23 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 2577ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-21 13:44:39 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 3004ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-21 13:45:03 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 2665ms (Views: 27.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-21 13:49:57 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (19.7ms)
+Completed 500 Internal Server Error in 2370ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `ndiveame' for #<Github::ResponseWrapper:0x007f86b4118d88>):
+    15:     
+    16: %dive
+    17:   %input{:name => "username", :type => "hidden", :value => current_user.username, :id => "username"}
+    18:   %input{:name => "reponame", :type => "hidden", :value => @repo.ndiveame, :id => "reponame"}
+    19:   First Date:
+    20:   %input{:name => "fdate", :type => "text", :id => "fdate", :value => Date.today - 10.years}
+    21:   %br
+  
+app/views/repositories/show.html.haml:18:in `_app_views_repositories_show_html_haml___4091862987248947696_70108261686380'
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-21 13:50:14 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 3366ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-04-21 13:50:44 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hSrZ7IF1VoVmWSPZal6ZOdKtseudHHnpghEu2DF9lmC+YvDMCfCLSjDfmPaiLfT3AzTQqI4bttVX3qW/d23m3A=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:50:44 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 22:11:39 +0530
+Started GET "/" for 127.0.0.1 at 2018-04-25 22:11:40 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (7.4ms)
+  Rendered sessions/new.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 720ms (Views: 713.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 730ms (Views: 719.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-25 22:11:43 +0530
+Started GET "/auth/github/callback?code=e173d9c1ef9dbaafd568&state=76f9a781d074e5c06be4eab063e904420afb1b6940190683" for 127.0.0.1 at 2018-04-25 22:11:44 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"e173d9c1ef9dbaafd568", "state"=>"76f9a781d074e5c06be4eab063e904420afb1b6940190683", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "406f741ce36ff6fb10a2a34ed89013ddc8470f5f"], ["updated_at", "2018-04-25 16:41:57.792121"], ["id", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (1241.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 1315ms (ActiveRecord: 1244.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 22:11:59 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 7011ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/repository?repo_name=AmuraProject" for 127.0.0.1 at 2018-04-25 22:12:12 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"AmuraProject"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (35.9ms)
+Completed 200 OK in 2908ms (Views: 47.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-04-25 22:12:28 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4s9jVIPotEn9xB5Z2wbmJnbcjX6NjNg19UN7nlhEUCFcv3NQwhofEJRsQFD/08KM5VfHk4tKHcHUgdbgJTNsNg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 22:12:28 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 11:49:34 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/trupti/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (23.9ms)
+Completed 200 OK in 729ms (Views: 715.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-04-26 11:50:13 +0530
+Started GET "/auth/github/callback?code=ec304118a8cfb3dacf08&state=8057a04e47d716f704d0ed254fe9791f5b051bac8cc4474e" for 127.0.0.1 at 2018-04-26 11:50:14 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"ec304118a8cfb3dacf08", "state"=>"8057a04e47d716f704d0ed254fe9791f5b051bac8cc4474e", "provider"=>"github"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "github"], ["uid", "5887719"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:12
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "6c3d9a70c068d11659816df6ae9a4a5c3b1a6e65"], ["updated_at", "2018-04-26 06:20:20.914589"], ["id", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (164.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 226ms (ActiveRecord: 166.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 11:50:21 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering sessions/new.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered sessions/new.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 1855ms (Views: 20.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/repository?repo_name=Angular2" for 127.0.0.1 at 2018-04-26 11:51:37 +0530
+Processing by RepositoriesController#show as HTML
+  Parameters: {"repo_name"=>"Angular2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering repositories/show.html.haml within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered repositories/show.html.haml within layouts/application (39.2ms)
+Completed 200 OK in 2143ms (Views: 57.9ms | ActiveRecord: 0.2ms)
+
+

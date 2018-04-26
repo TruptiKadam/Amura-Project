@@ -1,0 +1,29 @@
+= javascript_include_tag 'graph'
+%p
+  You are signed in as #{current_user.username}.  Click the button below to sign out.
+= button_to "Sign Out", signout_path, method: :delete
+
+%div
+  - if @repo.blank?
+    %h2 No Data To Display
+  - else
+  
+    %h2
+      = "Name : #{@repo.name} Repository"
+    %h2
+      = "Description : #{@repo.description}"
+    
+%dive
+  %input{:name => "username", :type => "hidden", :value => current_user.username, :id => "username"}
+  %input{:name => "reponame", :type => "hidden", :value => @repo.name, :id => "reponame"}
+  First Date:
+  %input{:name => "fdate", :type => "text", :id => "fdate", :value => Date.today - 10.years}
+  %br
+  %br
+  Last Date:
+  %input{:name => "ldate", :type => "text", :id => "ldate", :value => Date.today}
+  %br
+  = link_to "update", "#", :onclick => "loadData()"
+  %br
+  %p X-axis : Commit Year
+  %p Y-axis : No of commits

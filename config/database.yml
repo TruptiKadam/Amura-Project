@@ -22,6 +22,7 @@ test:
 
 production:
   adapter: postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
-  database: production_database
+  host: ec2-174-129-41-64.compute-1.amazonaws.com
+  database: d99vddea0t7i7t
+  user: rwtbyowczhyxbv
+  password: e9c6b92845969c3b9cdfaca5d3f20a1d91be040789613d772ac5bf6fa4e0e37b
